@@ -46,9 +46,9 @@ echo "Deduplicating"
 mkdir -p Dedup_out
 parallel -j $nthreads "zcat {} | perl ~/Applications/prinseq-lite-0.20.4/prinseq-lite.pl -fastq stdin -derep 14 -out_good stdout -out_bad null 2>/dev/null | gzip > Dedup_out/{/}" ::: merge_out/*.fastq.gz
 
-############################
-###Metagenomics or 16sRNA###
-############################
+##################
+###Metagenomics###
+##################
 mkdir -p kraken_uniq_out
 
 for f in Dedup_out/*fastq.gz; do

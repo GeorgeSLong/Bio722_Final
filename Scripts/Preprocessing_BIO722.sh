@@ -1,3 +1,5 @@
+#!/bin/sh
+
 Raw_Data=$1
 Processed_Data=$2
 nthreads=$3
